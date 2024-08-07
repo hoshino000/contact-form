@@ -25,7 +25,7 @@
             <div class="confirm__heading">
                 <h2>お問い合わせ内容確認</h2>
             </div>
-            <form class="form" action="/contacts/confirm" method="post">
+            <form class="form" action="/contacts" method="post">
                 @csrf
                 <div class="confirm-table">
                     <table class="confirm-table__inner">
@@ -50,7 +50,7 @@
                         <tr class="confirm-table__row">
                             <th class="confirm-table__header">お問い合わせ内容</th>
                             <td class="confirm-table__text">
-                                <input type="text" name="content" value="{{ $contact['contact'] }}" readonly />
+                                <input type="text" name="content" value="{{ $contact['content'] }}" readonly />
                             </td>
                         </tr>
                     </table>

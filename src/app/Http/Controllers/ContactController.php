@@ -14,8 +14,9 @@ class ContactController extends Controller
 
     public function confirm(Request $request)
     {
+        echo("ok");
         $contact = $request->only(['name', 'email', 'tel', 'content']);
-        return view('confirm', compact('contact'));
+        return view('confirm', ['contact' => $contact]);
     }
 
     public function store(Request $request)
